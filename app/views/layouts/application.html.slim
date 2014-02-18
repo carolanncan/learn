@@ -5,7 +5,11 @@ html
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
+    script src="js/SSUhtml5Audio.js" type="text/javascript"
+    link href="css/SSUhtml5audio.css" rel="stylesheet" type="text/css"
+
   body
     = render 'shared/header'
     section
       = yield
+= javascript_include_tag "audio"

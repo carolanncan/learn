@@ -1,0 +1,76 @@
+.controls {
+  @include shift(2);
+  @include span-columns(8);
+  background: lighten($light-gray, 10);
+  border-radius: 5px;
+  border: $border-style;
+  height: 4em;
+  overflow: hidden;
+  position: relative;
+}
+
+.play-pause {
+  border-right: $border-style;
+  color: $medium-gray;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'FontAwesome';
+  font-size: 1em;
+  font-weight: 700;
+  height: 100%;
+  padding-top: 1.25em;
+  position: absolute;
+  text-align: center;
+  width: 10%;
+
+  &:hover {
+    background: $dark-gray;
+    color: #fff;
+  }
+}
+
+.progress-bar {
+  height: 100%;
+  left:25%;
+  position: relative;
+  width: 75%;
+
+  #progress {
+    background: lighten($light-gray, 1);
+    position: absolute;
+    height: 100%;
+  }
+}
+
+.volume {
+  border-right: $border-style;
+  position: absolute;
+  padding: 0 1em;
+  width: 15%;
+  left: 10%;
+
+  input[type='range']#volume {
+    -webkit-appearance: none;
+    background-color: $medium-gray;
+    cursor: pointer;
+    margin-bottom: 1.7em;
+    margin-top: 1.8em;
+    height: 5px;
+    border-radius: 3px;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      @include linear-gradient(to right, $medium-gray, $dark-gray);
+    }
+}
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance:none;
+      @include size(1em);
+      background-color: $dark-gray;
+      border-radius: 50%;
+   }
+}
