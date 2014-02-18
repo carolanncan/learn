@@ -1,3 +1,13 @@
+body {
+  margin: 0;
+}
+
+section {
+  @include outer-container;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
 nav {
   background: lighten($light-gray, 10);
   height: auto;
@@ -37,10 +47,4 @@ nav {
 article {
   text-align: center;
   margin: 2em auto;
-
-  audio {
-    position: relative;
-    display: block;
-    margin: 2em auto;
-  }
 }
