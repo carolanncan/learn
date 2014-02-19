@@ -9,12 +9,12 @@ song.setAttribute("src", "http://avengethevirgins.net/wp-content/uploads/2013/08
 playPause.addEventListener("click", function(e){
     if (!songIsPlaying){
         song.play();
-        playPause.innerHTML = "&#xf04c;";
+        this.innerHTML = "&#xf04c;";
         songIsPlaying = true
         startTracking();
     } else {
         song.pause();
-        playPause.innerHTML = "&#xf04b;";
+        this.innerHTML = "&#xf04b;";
         songIsPlaying = false
         stopTracking();
     };

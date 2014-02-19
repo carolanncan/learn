@@ -33,17 +33,16 @@ video {
   }
 }
 
-#progressBar {
+.progress-bar {
   height: 100%;
   left:25%;
   position: relative;
   width: 75%;
 
-  span#progress {
+  #progress {
     background: $dark-gray;
     position: absolute;
     height: 100%;
-    width: 5px;
   }
 }
 
