@@ -4,4 +4,5 @@ LearningApp::Application.routes.draw do
   end
 
   get "pages/audio_playlist"
+  get "pages/greeter"
 end
