@@ -1,9 +1,10 @@
-var video = document.createElement('video');
+// var video = document.createElement('video');
+var video = document.getElementById("video");
 var playPause = document.getElementsByClassName("play-pause")[0];
 var videoIsPlaying = false;
 var slider = document.getElementById('volume');
 
-video.setAttribute("src", "http://avengethevirgins.net/wp-content/uploads/2013/08/Drake-Hold-On-Were-Going-Home.mp3")
+video.setAttribute("src", "http://goo.gl/jb2VGx")
 
 playPause.addEventListener("click", function(e){
     if (!videoIsPlaying){
@@ -27,7 +28,7 @@ var progress = document.getElementById('progress');
 var video.Timer;
 
 var startTracking = function(){
-  songTimer = setInterval(function(){
+  videoTimer = setInterval(function(){
      var value = parseInt(video.currentTime / video.duration)*100;
      progress.setAttribute = value + "%";
      progress.style.width = value + "%";
