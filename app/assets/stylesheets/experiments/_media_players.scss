@@ -1,9 +1,11 @@
 .video {
   @include shift(2);
   @include span-columns(8);
+  overflow: hidden;
 
   video {
     @include fill-parent;
+    border-radius: 5px 5px 0 0;
     margin: 0 auto;
     display: block;
   }
