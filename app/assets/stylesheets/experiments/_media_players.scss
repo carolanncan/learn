@@ -1,3 +1,18 @@
+.video {
+  @include shift(2);
+  @include span-columns(8);
+
+  video {
+    @include fill-parent;
+    margin: 0 auto;
+    display: block;
+  }
+
+  & + .controls {
+    border-radius: 0 0 5px 5px;
+    border: $border-style;
+  }
+}
 .controls {
   @include shift(2);
   @include span-columns(8);

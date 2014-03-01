@@ -1,9 +1,10 @@
+var video = document.getElementsByTagName('video');
 var video = document.createElement('video');
 var playPause = document.getElementsByClassName("play-pause")[0];
 var videoIsPlaying = false;
 var slider = document.getElementById('volume');
 
-video.setAttribute("src", "http://avengethevirgins.net/wp-content/uploads/2013/08/Drake-Hold-On-Were-Going-Home.mp3")
+video.setAttribute("src", "http://www.w3schools.com/html/mov_bbb.mp4")
 
 playPause.addEventListener("click", function(e){
     if (!videoIsPlaying){
