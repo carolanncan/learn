@@ -1,10 +1,12 @@
-var video = document.getElementsByTagName('video');
+// var video = document.getElementsByTagName('video');
 var video = document.createElement('video');
+document.body.getElementsByClassName('video')[0].appendChild(video);
 var playPause = document.getElementsByClassName("play-pause")[0];
 var videoIsPlaying = false;
 var slider = document.getElementById('volume');
 
 video.setAttribute("src", "http://www.w3schools.com/html/mov_bbb.mp4")
+
 
 playPause.addEventListener("click", function(e){
     if (!videoIsPlaying){
@@ -25,14 +27,18 @@ slider.onchange = function(){
 }
 
 var progress = document.getElementById('progress');
-var video.Timer;
+var videoTimer;
 
 var startTracking = function(){
-  songTimer = setInterval(function(){
-     var value = parseInt(video.currentTime / video.duration)*100;
+  videoTimer = setInterval(function(){
+     var value = (video.currentTime / video.duration *100).toFixed(2);
      progress.setAttribute = value + "%";
      progress.style.width = value + "%";
-     console.log(value + "%");
+     if (value == 100) { 
+      stopTracking();
+      playPause.innerHTML = "&#xf04b;";
+      videoIsPlaying = false;
+    }
    },60);
 }
 
