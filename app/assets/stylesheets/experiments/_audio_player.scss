@@ -1,0 +1,57 @@
+/*Play button*/
+#songPlay{
+  width: auto;
+  background: $light-gray;
+  padding: 10px;
+}
+/*Pause button*/
+#songPause{
+  @include size(30px 30px);
+  background: $blue;
+}
+/*Stop button*/
+#songStop{
+  @include size(30px 30px);
+  background: $light-red;
+}
+/*Play/Pause button*/
+#songPlayPause{
+  @include size(30px 30px);
+  background: $light-yellow;
+}
+/*Song location slider*/
+#songSlider{
+    width: 500px;
+    height: 10px;
+    background-color: black;
+    padding: 10px;
+}
+/*Track progress bar*/
+#trackProgress{
+    width: 0px;
+    height: 10px;
+    background-color: red;
+    padding: 10px;
+}
+/*Volume Up Button*/
+#volumeUp{
+  @include size(15px 15px);
+  background: $blue;
+
+}
+/*Volume Down Button*/
+#volumeDown{
+  @include size(15px 15px);
+  background: $dark-gray;
+}
+/*Volume Meter*/
+#volumeMeter{
+    width: 500px;
+    height: 10px;
+    background-color: black;
+}
+/*Volume Location Meter*/
+#volumeStatus{
+    height: 10px;
+    background-color: green;
+}
