@@ -11,7 +11,6 @@
 
 .button {
   color: $medium-gray;
-  cursor: pointer;
   font-family: 'FontAwesome';
   font-size: 1em;
   font-weight: 700;
@@ -26,6 +25,7 @@
 
 .play-pause {
   border-right: 1px solid $light-gray;
+  cursor: pointer;
   display: inline-block;
   height: 100%;
   padding-top: 1.2em;
@@ -33,12 +33,18 @@
   width: 4em;
 }
 
-input[type='range']#volume {
-  -webkit-appearance: slider-horizontal;
+.volume {
+  border-left: 1px solid $light-gray;
   display: inline-block;
   float: right;
   height: 100%;
-  margin: 0 1em;
   position: relative;
-  width: 6em;
+
+    input[type='range']#volume {
+    -webkit-appearance: slider-horizontal;
+    cursor: pointer;
+    margin: 0 1em;
+    padding: 1.5em 0;
+    width: 4em;
+  }
 }
