@@ -1,6 +1,6 @@
 .controls {
-  @include span-columns(8);
   @include shift(2);
+  @include span-columns(8);
   background: lighten($light-gray, 10);
   border-radius: 5px;
   border: 1px solid $light-gray;
@@ -9,42 +9,52 @@
   position: relative;
 }
 
-.button {
+.play-pause {
+  border-right: 1px solid $light-gray;
   color: $medium-gray;
+  cursor: pointer;
+  display: inline-block;
   font-family: 'FontAwesome';
   font-size: 1em;
   font-weight: 700;
+  height: 100%;
+  padding-top: 1.25em;
+  position: absolute;
+  text-align: center;
+  width: 10%;
 
-  .play-pause {
-    &:hover {
-      color: #fff;
-      background: $dark-gray;
-    }
+  &:hover {
+    background: $dark-gray;
+    color: #fff;
   }
 }
 
-.play-pause {
-  border-right: 1px solid $light-gray;
-  cursor: pointer;
-  display: inline-block;
+#progressBar {
   height: 100%;
-  padding-top: 1.2em;
-  text-align: center;
-  width: 4em;
+  left:25%;
+  position: relative;
+  width: 75%;
+
+  span#progress {
+    background: $dark-gray;
+    position: absolute;
+    height: 100%;
+    width: 10px;
+  }
 }
 
 .volume {
-  border-left: 1px solid $light-gray;
-  display: inline-block;
-  float: right;
-  height: 100%;
-  position: relative;
+  border-right: 1px solid $light-gray;
+  position: absolute;
+  padding: 0 1em;
+  width: 15%;
+  left: 10%;
 
-    input[type='range']#volume {
-    -webkit-appearance: slider-horizontal;
+  input[type='range']#volume {
     cursor: pointer;
-    margin: 0 1em;
-    padding: 1.5em 0;
-    width: 4em;
+    padding-bottom: 1.5em;
+    padding-top: 1.5em;
+    height: 100%;
+    width: 100%;
   }
 }
