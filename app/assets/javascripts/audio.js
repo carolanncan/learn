@@ -6,6 +6,9 @@ var slider = document.getElementById('volume');
 
 song.setAttribute("src", "http://avengethevirgins.net/wp-content/uploads/2013/08/Drake-Hold-On-Were-Going-Home.mp3")
 
+var playPause = document.getElementsByClassName("play-pause")[0];
+var songIsPlaying = false;
+
 playPause.addEventListener("click", function(e){
     if (!songIsPlaying){
         song.play();
@@ -38,4 +41,3 @@ var startTracking = function(){
 var stopTracking = function(){
   clearInterval(songTimer)
 }
-

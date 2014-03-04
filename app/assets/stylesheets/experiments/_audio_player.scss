@@ -1,58 +1,31 @@
-/*Play button*/
 .controls {
-
+  @include span-columns(8);
+  @include shift(2);
+  background: lighten($light-gray, 10);
+  border-radius: 5px;
+  border: 1px solid $light-gray;
+  height: 4em;
+  overflow: hidden;
+  position: relative;
 }
-#songPlay{
-  width: auto;
+
+.play-pause {
+  background: #fff;
+  border-right: 1px solid $light-gray;
+  color: $medium-gray;
+  cursor: pointer;
   display: inline-block;
-  padding: 10px;
-  background: $light-gray;
-}
+  font-family: 'FontAwesome';
+  font-size: 1em;
+  font-weight: 700;
+  height: 100%;
+  padding-top: 1.2em;
+  text-align: center;
+  text-transform: uppercase;
+  width: 4em;
 
-#songPause{
-  @include size(30px 30px);
-  background: $blue;
-}
-
-#songStop{
-  @include size(30px 30px);
-  background: $light-red;
-}
-
-#songPlayPause{
-  @include size(30px 30px);
-  background: $light-yellow;
-}
-
-#songSlider{
-    width: 8px;
-    height: 20px;
-    background-color: black;
-}
-
-#trackProgress{
-    height: 4px;
-    background-color: $medium-gray;
-}
-
-#volumeUp{
-  @include size(15px 15px);
-  background: $blue;
-
-}
-/*Volume Down Button*/
-#volumeDown{
-  @include size(15px 15px);
-  background: $dark-gray;
-}
-/*Volume Meter*/
-#volumeMeter{
-    width: 500px;
-    height: 10px;
-    background-color: black;
-}
-/*Volume Location Meter*/
-#volumeStatus{
-    height: 10px;
-    background-color: green;
+  &:hover {
+    color: #fff;
+    background: $dark-gray;
+  }
 }
