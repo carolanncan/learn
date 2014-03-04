@@ -1,3 +1,7 @@
+video {
+  height: 400px;
+  width: 800px;
+}
 .controls {
   @include shift(2);
   @include span-columns(8);
