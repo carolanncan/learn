@@ -39,7 +39,6 @@ var startTracking = function(){
     progress.setAttribute = value + "%";
     progress.style.width = value + "%";
   }, 60);
-}
 
 var stopTracking = function(){
   clearInterval(songTimer)
