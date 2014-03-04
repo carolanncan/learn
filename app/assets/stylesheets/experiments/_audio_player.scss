@@ -9,23 +9,36 @@
   position: relative;
 }
 
-.play-pause {
-  background: #fff;
-  border-right: 1px solid $light-gray;
+.button {
   color: $medium-gray;
   cursor: pointer;
-  display: inline-block;
   font-family: 'FontAwesome';
   font-size: 1em;
   font-weight: 700;
+
+  .play-pause {
+    &:hover {
+      color: #fff;
+      background: $dark-gray;
+    }
+  }
+}
+
+.play-pause {
+  border-right: 1px solid $light-gray;
+  display: inline-block;
   height: 100%;
   padding-top: 1.2em;
   text-align: center;
-  text-transform: uppercase;
   width: 4em;
+}
 
-  &:hover {
-    color: #fff;
-    background: $dark-gray;
-  }
+input[type='range']#volume {
+  -webkit-appearance: slider-horizontal;
+  display: inline-block;
+  float: right;
+  height: 100%;
+  margin: 0 1em;
+  position: relative;
+  width: 6em;
 }
