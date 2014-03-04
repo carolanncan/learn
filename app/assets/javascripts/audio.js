@@ -1,5 +1,4 @@
 var song = document.createElement('audio');
-
 var playPause = document.getElementsByClassName("play-pause")[0];
 var songIsPlaying = false;
 var slider = document.getElementById('volume');
@@ -29,10 +28,16 @@ var songTimer;
 
 var startTracking = function(){
   songTimer = setInterval(function(){
-    var value = (song.currentTime / song.duration * 100).toFixed(2);
-    progress.setAttribute = value + "%";
-    progress.style.width = value + "%";
-  }, 60);
+     var value = (song.currentTime / song.duration *100).toFixed(2);
+     progress.setAttribute = value + "%";
+     progress.style.width = value + "%";
+     if (value == 100) { 
+      stopTracking();
+      playPause.innerHTML = "&#xf04b;";
+      songIsPlaying = false;
+    }
+   },60);
+}
 
 var stopTracking = function(){
   clearInterval(songTimer)
