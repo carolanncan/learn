@@ -18,12 +18,8 @@ nav {
     list-style: none;
 
     li {
-      display: inline;
+      display: inline-block;
       margin: 0 1em;
-
-      &:last-of-type {
-        float: right;
-      }
     }
   }
 }

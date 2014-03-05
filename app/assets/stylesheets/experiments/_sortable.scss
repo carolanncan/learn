@@ -1,0 +1,34 @@
+section.sort {
+  @include outer-container;
+
+  ul.sortable {
+    @include span-columns(12);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  li {
+    @include omega(3n);
+    @include span-columns (4);
+    background: lighten($blue,10);
+    border-radius: 10px;
+    color: white;
+    font-size: 1.3em;
+    font-weight: 700;
+    text-align: center;
+    height: 20%;
+    margin-bottom: 1.3em;
+    padding-top: 5.5%;
+    box-shadow: 3px 3px 0px 0px $blue;
+
+    &:hover {
+      @include transition(all .1s linear);
+      background: $blue;
+      box-shadow: -3px -3px 0px 0px darken($blue, 30);
+    }
+  }
+}

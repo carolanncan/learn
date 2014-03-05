@@ -1,4 +1,5 @@
 //*= require font-awesome
+//*= require jquery.ui.all
 
 @charset "utf-8";
 
@@ -12,3 +13,4 @@
 
 @import 'shared';
 @import 'experiments/media_players';
+@import 'experiments/sortable';
