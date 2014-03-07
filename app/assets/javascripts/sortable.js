@@ -1,3 +1,5 @@
 $(function() {
-  $('.sortable').sortable();
+    $( "#sortable" ).sortable({ 
+        placeholder: "ui-sortable-placeholder" 
+    });
 });

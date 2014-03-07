@@ -3,6 +3,7 @@ section.sort {
 
   ul.sortable {
     @include span-columns(12);
+    height: 100%;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -17,18 +18,30 @@ section.sort {
     background: lighten($blue,10);
     border-radius: 10px;
     color: white;
+    display: inline-block;
+    vertical-align: middle;
     font-size: 1.3em;
     font-weight: 700;
     text-align: center;
     height: 20%;
     margin-bottom: 1.3em;
-    padding-top: 5.5%;
     box-shadow: 3px 3px 0px 0px $blue;
 
     &:hover {
       @include transition(all .1s linear);
       background: $blue;
       box-shadow: -3px -3px 0px 0px darken($blue, 30);
+    }
+
+    .text-wrap {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .alignment-helper {
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
     }
   }
 }
