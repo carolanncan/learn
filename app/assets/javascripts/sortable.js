@@ -1,5 +1,6 @@
 $(function() {
     $( "#sortable" ).sortable({ 
-        placeholder: "ui-sortable-placeholder" 
+      placeholder: "ui-state-highlight"
     });
 });
+
