@@ -1,13 +1,21 @@
 = content_for :page_title, 'Learning'
 section
-  h1 Browse through my experiments.
   .body
+    h3 Browse through my experiments.
     ul
-      li =link_to page_path('audio_playlist')
-        | Audio player
-      li =link_to page_path('video_player')
-        | Video player
-      li =link_to page_path('sortable')
-        | Sortable
-      li =link_to page_path('greeter')
-        | Greeter
+      li
+        =link_to page_path('audio_playlist')
+          | Audio player
+          i.fa.fa-volume-down
+      li
+        =link_to page_path('video_player')
+          | Video player
+          i.fa.fa-video-camera
+      li
+        =link_to page_path('sortable')
+          | Sortable
+          i.fa.fa-arrows
+      li
+        =link_to page_path('greeter')
+          | Greeter
+          i.fa.fa-smile-o

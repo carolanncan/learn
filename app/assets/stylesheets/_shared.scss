@@ -1,3 +1,15 @@
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+span.clear {
+  @include clearfix;
+}
+
 body {
   margin: 0;
 }
@@ -9,9 +21,10 @@ section {
 }
 
 nav {
-  background: lighten($light-gray, 10);
+  border-bottom: 1px solid $light-gray;
   height: auto;
-  padding: 1em;
+  overflow: hidden;
+  padding: 1em 0;
   width: 100%;
 
   ul {
@@ -19,23 +32,66 @@ nav {
 
     li {
       display: inline-block;
-      margin: 0 1em;
+      margin-right: 1em;
+
+      a {
+        border-radius: 30px;
+        border: 1px solid $blue;
+        padding: .3em 1em;
+
+        &:hover {
+          background: $blue;
+          color: $light-gray;
+        }
+      }
     }
   }
 }
 
-.body ul {
-  border-top: 1px dashed $medium-gray;
+.body {
   margin: 1em 0;
-  padding-top: 1em;
+  text-align: center;
 
-  li {
-    font-size: 1.5em;
-    line-height: 2;
-    padding-left: .9em;
+  ul {
+    @include span-columns(10);
+    @include shift(1);
+    padding-top: 2em;
 
-    &:hover {
-      background: lighten($light-gray, 10);
+    li {
+      @include span-columns(5 of 10);
+      @include omega(2n);
+      margin-bottom: 2em;
+
+      a {
+        @include transition(all .15s linear);
+        background: lighten($light-gray, 10);
+        border-radius: 30px;
+        border: 1px solid darken($light-gray, 10);
+        display: block;
+        font-size: 1.5em;
+        line-height: 2;
+        padding: 1 .9em;
+        position: relative;
+
+        i {
+          @include position(relative, 2px 0 0 4%);
+          @include transition(all .15s linear);
+          color: $blue;
+          opacity: 0;
+          position: relative;
+          visibility: hidden;
+        }
+
+        &:hover {
+          background: lighten($blue, 40);
+          border: 1px solid $blue;
+
+          i {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
     }
   }
 }
