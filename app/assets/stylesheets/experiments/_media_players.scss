@@ -1,6 +1,6 @@
 .video {
-  @include shift(2);
   @include span-columns(8);
+  @include shift(2);
   overflow: hidden;
 
   video {
@@ -15,9 +15,10 @@
     border: $border-style;
   }
 }
+
 .controls {
-  @include shift(2);
   @include span-columns(8);
+  @include shift(2);
   background: lighten($light-gray, 10);
   border-radius: 5px;
   border: $border-style;
@@ -27,6 +28,7 @@
 }
 
 .play-pause {
+  @include size(10% 100%);
   border-right: $border-style;
   color: $medium-gray;
   cursor: pointer;
@@ -34,11 +36,9 @@
   font-family: 'FontAwesome';
   font-size: 1em;
   font-weight: 700;
-  height: 100%;
   padding-top: 1.25em;
   position: absolute;
   text-align: center;
-  width: 10%;
 
   &:hover {
     background: $dark-gray;
@@ -47,10 +47,9 @@
 }
 
 .progress-bar {
-  height: 100%;
+  @include size(75% 100%);
   left:25%;
   position: relative;
-  width: 75%;
 
   #progress {
     background: lighten($light-gray, 1);
@@ -61,33 +60,33 @@
 
 .volume {
   border-right: $border-style;
-  position: absolute;
-  padding: 0 1em;
-  width: 15%;
   left: 10%;
+  padding: 0 1em;
+  position: absolute;
+  width: 15%;
 
   input[type='range']#volume {
+    @include size(100% 5px);
     -webkit-appearance: none;
     background-color: $medium-gray;
+    border-radius: 3px;
     cursor: pointer;
     margin-bottom: 1.7em;
     margin-top: 1.8em;
-    height: 5px;
-    border-radius: 3px;
-    width: 100%;
 
-    &:focus {
-      outline: none;
-    }
-    &:active {
-      @include linear-gradient(to right, $medium-gray, $dark-gray);
-    }
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    @include linear-gradient(to right, $medium-gray, $dark-gray);
+  }
 }
 
-    input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance:none;
-      @include size(1em);
-      background-color: $dark-gray;
-      border-radius: 50%;
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance:none;
+    @include size(1em);
+    background-color: $dark-gray;
+    border-radius: 50%;
    }
 }

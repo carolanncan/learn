@@ -2,7 +2,8 @@ section.sort {
   @include outer-container;
 
   ul#sortable {
-    @include span-columns(12);
+    @include span-columns(8);
+    @include shift(2);
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -11,37 +12,50 @@ section.sort {
     user-select: none;
   }
 
+
+   .ui-state-default, .ui-state-highlight, .ui-state-helper {
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .ui-state-default {
+    background: lighten($blue, 40);
+    color: $blue;
+    border: 1px solid $blue;
+
+    &:hover {
+      background: $blue;
+      color: #fff;
+    }
+
+    &:active {
+      background: $blue;
+    }
+  }
+
   .ui-sortable-helper {
-    background: $success-color !important;
-    box-shadow: -2px -2px 0px 0px darken($success-color, 10) !important;
+    background: lighten($blue, 10) !important;
+    border: 1px solid $blue !important;
   }
 
   .ui-state-highlight {
-    background: lighten($success-color, 20);
+    background: lighten($blue, 46);
+    border: 1px dashed lighten($blue, 20);
   }
 
   li {
-    @include omega(3n);
-    @include span-columns (4);
-    @include transition(all, .15s, linear);
-    background: lighten($blue,10);
-    border-radius: 8px;
-    border: none;
-    color: white;
+    @include fill-parent;
+    @include transition(all .15s, linear);
     display: inline-block;
-    vertical-align: middle;
     font-size: 1.3em;
-    font-weight: 700;
-    text-align: center;
-    height: 20%;
+    font-weight: 300;
+    height: 7%;
     margin-bottom: 1.3em;
+    text-align: center;
+    vertical-align: middle;
 
-    &:hover {
-      @include transition(all .1s linear);
-      background: $blue;
-      border: none;
-      box-shadow: -2px -2px 0px 0px darken($blue, 30);
-    }
+
 
     .text-wrap {
       display: inline-block;
